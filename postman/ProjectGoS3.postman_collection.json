@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "cbd8958c-020f-44f2-b711-f77c9b154ad3",
+		"name": "ProjectGoS3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2294643"
+	},
+	"item": [
+		{
+			"name": "List Objects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/lists3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Download Object",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/downloads3?key=Screenshot 2023-12-27 at 5.12.29 PM.png&filename=test.png",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"download"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "Screenshot 2023-12-27 at 5.12.29 PM.png"
+						},
+						{
+							"key": "filename",
+							"value": "test.png"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Object",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/brianenochson/go/goS3/Screenshot 2023-12-27.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/uploads3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
