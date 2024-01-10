@@ -1,9 +1,3 @@
-/*
-   This is a simple code example for connecting, uploading, downloading and listing files
-   from an AWS S3 Bucket using the AWS SDK v2 for Go.
-   Author: Antonio Sanchez antonio@asanchez.dev
-*/
-
 package main
 
 import (
@@ -23,6 +17,7 @@ func main() {
 	http.HandleFunc("/uploads3", handlerUpload)
 	http.HandleFunc("/downloads3", handlerDownload)
 	http.HandleFunc("/lists3", handlerList)
+	http.HandleFunc("/creates3", handlerCreateBucket)
 	fmt.Println("Server starting on http://localhost:8080")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }

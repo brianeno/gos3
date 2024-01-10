@@ -8,7 +8,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/s3"
 )
 
-// We will be using this client everywhere in our code
+// We will be using this client throughout in our code
 var awsS3Client *s3.Client
 
 // configS3 creates the S3 client

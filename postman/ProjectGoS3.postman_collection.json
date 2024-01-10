@@ -19,7 +19,7 @@
 					],
 					"port": "8080",
 					"path": [
-						"list"
+						"lists3"
 					]
 				}
 			},
@@ -38,7 +38,7 @@
 					],
 					"port": "8080",
 					"path": [
-						"download"
+						"downloads3"
 					],
 					"query": [
 						{
@@ -80,7 +80,39 @@
 					],
 					"port": "8080",
 					"path": [
-						"upload"
+						"uploads3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Bucket",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/brianenochson/go/goS3/Screenshot 2023-12-27.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/creates3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"creates3"
 					]
 				}
 			},

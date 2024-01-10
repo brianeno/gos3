@@ -10,7 +10,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/s3"
 )
 
-// Download: /download?key={key of the object}&filename={name for the new file}
+// Download: /downloads3?key={key of the object}&filename={name for the new file}
 func handlerDownload(w http.ResponseWriter, r *http.Request) {
 
 	// We get the name of the file on the URL
